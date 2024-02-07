@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Message for Momo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #screen1 {
+      background-color: #FF4500; /* Reddish-Blue background */
+    }
+
+    #screen2 {
+      background-color: #FFC0CB; /* Whiteish-Red background */
+      display: none;
+    }
+
+    #screen3 {
+      background-color: #FF0000; /* Red background */
+      display: none;
+    }
+
+    h1 {
+      color: #fff; /* White text color */
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #fff; /* White button background */
+      color: #000; /* Black button text color */
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    #roseButton {
+      display: none;
+    }
+
+    #roseShape {
+      background-color: #fff; /* White rose shape */
+      color: #FF0000; /* Red text color */
+      padding: 20px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="screen1" class="screen">
+    <h1>Special Message for Momo</h1>
+    <button onclick="showScreen2()">Click here</button>
+  </div>
+
+  <div id="screen2" class="screen">
+    <img src="C:\Users\Gopal.Jha\OneDrive - Times Group\Desktop\pexels-secret-garden.jpg" alt="Rose Image" width="200">
+    <div id="roseButton">
+      <button onclick="showScreen3()">Msg from Gopa to their cute Momo</button>
+    </div>
+  </div>
+
+  <div id="screen3" class="screen">
+    <div id="roseShape">
+      Phool insano se zyada khubsurat hote hai, par kuch log phool se bhi zyada pyare hote hai, jaise ki aap. I love you Momo
+    </div>
+  </div>
+
+  <script>
+    function showScreen2() {
+      document.getElementById('screen1').style.display = 'none';
+      document.getElementById('screen2').style.display = 'flex';
+      setTimeout(function () {
+        document.getElementById('roseButton').style.display = 'block';
+      }, 2000);
+    }
+
+    function showScreen3() {
+      document.getElementById('screen2').style.display = 'none';
+      document.getElementById('screen3').style.display = 'flex';
+    }
+  </script>
+
+</body>
+</html>
